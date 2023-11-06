@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hookah Dog's</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="script.js">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index2.html">Loja</a></li>
+            <li><a href="index3.html">Sobre nós</a></li>
+        </ul>
+    </nav>
+
+
+    <footer>
+        <p>&copy; 2023 Hookah Dogs. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <a class="instagram-link" href="https://www.instagram.com/dogstabacaria/?hl=pt-br" target="_blank">
+        
+        <i class="fa fa-book"></i>
+    </a>
+    
+
+    <div id="aviso">
+        Esta página é destinada a maiores de 18 anos. Ao continuar, você confirma sua idade.
+        <button onclick="confirmarIdade()">Sim, tenho 18 anos</button>
+    </div>
+</body>
+<script>
+    function confirmarIdade() {
+    // Oculta o aviso ao clicar no botão "Sim, tenho 18 anos"
+    document.getElementById("aviso").style.display = "none";
+}
+</script>
+</html>

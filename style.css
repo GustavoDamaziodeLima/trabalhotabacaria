@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    background-image: url('img/Inicio.jpg');
+    background-size: cover;
+    font-family: 'Poppins', sans-serif; 
+    
+}
+
+nav {
+    background: transparent;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: gold;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+footer {
+    background: transparent; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto do rodapé */
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 1850px;
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.instagram-link {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 10px; /* Distância do topo em pixels */
+    right: 10px; /* Distância da direita em pixels */
+}
+
+.instagram-link i {
+    font-size: 24px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+
+#aviso {
+    background-color: #f00; /* Cor de fundo vermelha para chamar a atenção */
+    color: #fff; /* Cor do texto branca para contraste */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno para melhor leitura */
+}
+
+
+button {
+    color: white;
+    background-color: red;
+    border-color: darkred;
+}
+
+
