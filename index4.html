@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" type="text/css" href="styleloja.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hookah Dog's</title>
+</head>
+<style>
+    body {
+        background-color: #000;
+        color: #FFD700;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #000;
+        color: #FFD700;
+        text-align: center;
+        padding: 1em;
+    }
+
+    section {
+        margin: 2em;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #FFD700;
+        color: #000;
+        padding: 0.5em 1em;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav {
+    background: transparent;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: gold;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+</style>
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index2.html">Catálogo</a></li>
+            <li><a href="index3.html">Sobre nós</a></li>
+            <li><a href="index4.html">Cadastro</a></li>
+        </ul>
+    </nav>
+
+<header>
+    <h1>Hookah Dog's - Cadastro</h1>
+</header>
+
+<section>
+    <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+    </form>
+
+    <div id="mensagem" style="display: none; margin-top: 1em; color: #00FF00;">
+        Cadastro realizado com sucesso!
+    </div>
+</section>
+
+<script>
+    function cadastrar() {
+        // Verifica se todos os campos estão preenchidos
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+
+        if (nome && email && senha) {
+            // Simula o envio do formulário para um servidor (backend)
+            // Aqui você pode adicionar lógica para enviar os dados para um servidor
+            // e receber uma resposta para saber se o cadastro foi bem-sucedido.
+
+            // Neste exemplo, apenas exibimos a mensagem de sucesso.
+            document.getElementById("cadastroForm").style.display = "none";
+            document.getElementById("mensagem").style.display = "block";
+
+            // Limpa todas as informações digitadas no formulário
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("senha").value = "";
+        } else {
+            // Caso contrário, exibe uma mensagem indicando que todos os campos são obrigatórios
+            alert("Todos os campos são obrigatórios. Por favor, preencha todos os campos.");
+        }
+    }
+</script>
+
+
+</body>
+
